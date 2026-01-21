@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    scroll-behavior: smooth;
+    font-family: "Figtree", sans-serif;
+    background: black;
+    color: white;
+}
+
+body {
+    background: black;
+}
+
+.logo {
+    height: 50px;
+}
