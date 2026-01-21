@@ -13,44 +13,64 @@
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="foods.css">
+    <link rel="shortcut icon" href="./img/icons/Logo1.png" type="image/x-icon">
 </head>
 
 <body>
-    <header>
-        <img class="logo" src="./img/icons/Logo 02.png" alt="Logo">
+    <header class="widthcontrol">
+        <img class="logo" src="./img/icons/MealDropTextLogo.png" alt="Logo">
         <div class="menuicon">
             <div class="menubar1"></div>
             <div class="menubar2"></div>
             <div class="menubar3"></div>
         </div>
     </header>
-    <section class="top">
+
+    <section class="basket">
+        <p>Your basket</p>
+        <div>
+            <div>
+                <p>1 x Burger</p>
+                </div>
+            <div>
+                <p>+ T -</p>
+                <p>16,90 €</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="top widthcontrol">
         <div class="topimages">
             <div class="topbackground"></div>
-            <div class="toplogo"></div>
+            <a href="#menu" class="toplogo">
+                <p>ORDER<br>NOW</p>
+            </a>
         </div>
 
         <div class="h1andreviews">
             <h1>MealDrop</h1>
-            <div class="reviews">
-                <img src="./img/icons/star.png" alt="Reviews Icon">
-                <p>4,1 (317)</p>
-            </div>
         </div>
-        <h2>Juicy, fresh, and ready to drop—your meal, your way.</h2>
+        <h2>Juicy, fresh, and ready to drop. Your meal, your way.</h2>
+        <div class="reviews">
+            <img src="./img/icons/star.png" alt="Reviews Icon">
+            <p>4,1 (317)</p>
+        </div>
     </section>
 
-    <main>
-        <article>
+    <main class="widthcontrol" id="menu">
+        <article class="foodarea">
             <h3>Burgers</h3>
             <section class="foodsection">
                 <article class="foodarticle">
-                    <div>
+                    <div class="foodimageandname">
                         <img class="foodimages" src="./img/foodimages/burger.png" alt="Burger Bild">
+                        <div>
+                            <h4>Smoke Grilled Burger</h4>
+                        </div>
                     </div>
-                    <div>
-                        <h4>Smoke Grilled Burger</h4>
-                        <h5>Description Here...</h5>
+                    <div class="priceandname">
+
+                        <h5>Very long description will go here bla bla bla..</h5>
                         <div class="priceandaddbutton">
                             <div>
                                 <p class="startingprice">Starting from</p>
@@ -61,11 +81,15 @@
                     </div>
                 </article>
                 <article class="foodarticle">
-                    <div>
+                    <div class="foodimageandname">
                         <img class="foodimages" src="./img/foodimages/burger.png" alt="Burger Bild">
+                        <div>
+                            <h4>Smoke Grilled Burger</h4>
+                        </div>
                     </div>
-                    <div>
-                        <h4>Smoke Grilled Burger</h4>
+                    <div class="priceandname">
+
+                        <h5>Very long description will go here bla bla bla..</h5>
                         <div class="priceandaddbutton">
                             <div>
                                 <p class="startingprice">Starting from</p>
@@ -76,11 +100,37 @@
                     </div>
                 </article>
                 <article class="foodarticle">
-                    <div>
+                    <div class="foodimageandname">
                         <img class="foodimages" src="./img/foodimages/burger.png" alt="Burger Bild">
+                        <div>
+                            <h4>Smoke Grilled Burger</h4>
+                        </div>
                     </div>
-                    <div>
-                        <h4>Smoke Grilled Burger</h4>
+                    <div class="priceandname">
+
+                        <h5>Very long description will go here bla bla bla..</h5>
+                        <div class="priceandaddbutton">
+                            <div>
+                                <p class="startingprice">Starting from</p>
+                                <p class="price" id="price">$15.50</p>
+                            </div>
+                            <div class="plusicon"><img src="./img/icons/add.png" alt="plus icon"></div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+            <h3>Pizza</h3>
+            <section class="foodsection">
+                <article class="foodarticle">
+                    <div class="foodimageandname">
+                        <img class="foodimages" src="./img/foodimages/burger.png" alt="Burger Bild">
+                        <div>
+                            <h4>Smoke Grilled Burger</h4>
+                        </div>
+                    </div>
+                    <div class="priceandname">
+
+                        <h5>Very long description will go here bla bla bla..</h5>
                         <div class="priceandaddbutton">
                             <div>
                                 <p class="startingprice">Starting from</p>
@@ -91,11 +141,94 @@
                     </div>
                 </article>
                 <article class="foodarticle">
-                    <div>
+                    <div class="foodimageandname">
                         <img class="foodimages" src="./img/foodimages/burger.png" alt="Burger Bild">
+                        <div>
+                            <h4>Smoke Grilled Burger</h4>
+                        </div>
                     </div>
-                    <div>
-                        <h4>Smoke Grilled Burger</h4>
+                    <div class="priceandname">
+
+                        <h5>Very long description will go here bla bla bla..</h5>
+                        <div class="priceandaddbutton">
+                            <div>
+                                <p class="startingprice">Starting from</p>
+                                <p class="price" id="price">$15.50</p>
+                            </div>
+                            <div class="plusicon"><img src="./img/icons/add.png" alt="plus icon"></div>
+                        </div>
+                    </div>
+                </article>
+                <article class="foodarticle">
+                    <div class="foodimageandname">
+                        <img class="foodimages" src="./img/foodimages/burger.png" alt="Burger Bild">
+                        <div>
+                            <h4>Smoke Grilled Burger</h4>
+                        </div>
+                    </div>
+                    <div class="priceandname">
+
+                        <h5>Very long description will go here bla bla bla..</h5>
+                        <div class="priceandaddbutton">
+                            <div>
+                                <p class="startingprice">Starting from</p>
+                                <p class="price" id="price">$15.50</p>
+                            </div>
+                            <div class="plusicon"><img src="./img/icons/add.png" alt="plus icon"></div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+            <h3>Fried Chicken</h3>
+            <section class="foodsection">
+                <article class="foodarticle">
+                    <div class="foodimageandname">
+                        <img class="foodimages" src="./img/foodimages/burger.png" alt="Burger Bild">
+                        <div>
+                            <h4>Smoke Grilled Burger</h4>
+                        </div>
+                    </div>
+                    <div class="priceandname">
+
+                        <h5>Very long description will go here bla bla bla..</h5>
+                        <div class="priceandaddbutton">
+                            <div>
+                                <p class="startingprice">Starting from</p>
+                                <p class="price" id="price">$15.50</p>
+                            </div>
+                            <div class="plusicon"><img src="./img/icons/add.png" alt="plus icon"></div>
+                        </div>
+                    </div>
+                </article>
+                <article class="foodarticle">
+                    <div class="foodimageandname">
+                        <img class="foodimages" src="./img/foodimages/burger.png" alt="Burger Bild">
+                        <div>
+                            <h4>Smoke Grilled Burger</h4>
+                        </div>
+                    </div>
+                    <div class="priceandname">
+
+                        <h5>Very long description will go here bla bla bla..</h5>
+                        <div class="priceandaddbutton">
+                            <div>
+                                <p class="startingprice">Starting from</p>
+                                <p class="price" id="price">$15.50</p>
+                            </div>
+                            <div class="plusicon"><img src="./img/icons/add.png" alt="plus icon"></div>
+                        </div>
+                    </div>
+                </article>
+                <article class="foodarticle">
+                    <div class="foodimageandname">
+                        <img class="foodimages" src="./img/foodimages/burger.png" alt="Burger Bild">
+                        <div>
+                            <h4>Smoke Grilled Burger</h4>
+                        </div>
+                    </div>
+                    <div class="priceandname">
+
+                        <h5>Very long description will go here bla bla bla..</h5>
                         <div class="priceandaddbutton">
                             <div>
                                 <p class="startingprice">Starting from</p>
@@ -107,69 +240,6 @@
                 </article>
             </section>
         </article>
-        <h3>Fried Chicken</h3>
-        <section class="foodsection">
-            <article class="foodarticle">
-                <div>
-                    <img class="foodimages" src="./img/foodimages/burger.png" alt="Burger Bild">
-                </div>
-                <div>
-                    <h4>Smoke Grilled Burger</h4>
-                    <div class="priceandaddbutton">
-                        <div>
-                            <p class="startingprice">Starting from</p>
-                            <p class="price" id="price">$15.50</p>
-                        </div>
-                        <div class="plusicon"><img src="./img/icons/add.png" alt="plus icon"></div>
-                    </div>
-                </div>
-            </article>
-            <article class="foodarticle">
-                <div>
-                    <img class="foodimages" src="./img/foodimages/burger.png" alt="Burger Bild">
-                </div>
-                <div>
-                    <h4>Smoke Grilled Burger</h4>
-                    <div class="priceandaddbutton">
-                        <div>
-                            <p class="startingprice">Starting from</p>
-                            <p class="price" id="price">$15.50</p>
-                        </div>
-                        <div class="plusicon"><img src="./img/icons/add.png" alt="plus icon"></div>
-                    </div>
-                </div>
-            </article>
-            <article class="foodarticle">
-                <div>
-                    <img class="foodimages" src="./img/foodimages/burger.png" alt="Burger Bild">
-                </div>
-                <div>
-                    <h4>Smoke Grilled Burger</h4>
-                    <div class="priceandaddbutton">
-                        <div>
-                            <p class="startingprice">Starting from</p>
-                            <p class="price" id="price">$15.50</p>
-                        </div>
-                        <div class="plusicon"><img src="./img/icons/add.png" alt="plus icon"></div>
-                    </div>
-                </div>
-            </article>
-            <article class="foodarticle">
-                <div>
-                    <img class="foodimages" src="./img/foodimages/burger.png" alt="Burger Bild">
-                </div>
-                <div>
-                    <h4>Smoke Grilled Burger</h4>
-                    <div class="priceandaddbutton">
-                        <div>
-                            <p class="startingprice">Starting from</p>
-                            <p class="price" id="price">$15.50</p>
-                        </div>
-                        <div class="plusicon"><img src="./img/icons/add.png" alt="plus icon"></div>
-                    </div>
-                </div>
-            </article>
-        </section>
     </main>
 
     <footer>

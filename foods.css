@@ -1,28 +1,39 @@
 h3 {
     font-size: 28px;
-    padding: 30px 20px 0px 20px;
+    padding-top: 36px;
     font-weight: 600;
+    color: white;
 }
 
 h4 {
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+h5 {
     margin-bottom: 15px;
+    font-weight: 400;
+    color: rgb(194, 194, 194);
 }
 
 .foodarticle {
-    background: rgba(0, 0, 0, 0.645);
+    background: linear-gradient(45deg, rgba(19, 17, 24, 1) 0%, rgba(32, 17, 17, 1) 100%);
     border-radius: 30px;
-    height: 250px;
+    height: 300px;
     width: 200px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     flex-direction: column;
+    border: 1px solid #81272C;
+    padding: 0px 20px 0px 20px;
 }
 
 .foodimages {
     height: 100px;
     width: auto;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 .startingprice {
@@ -48,6 +59,10 @@ h4 {
     cursor: pointer;
 }
 
+.plusicon:hover {
+    background: rgb(201, 201, 201);
+}
+
 .plusicon img {
     height: 18px;
 }
@@ -55,6 +70,7 @@ h4 {
 .priceandaddbutton {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .foodsection {
@@ -63,5 +79,25 @@ h4 {
     align-items: center;
     flex-wrap: wrap;
     gap: 10px;
-    padding: 10px 20px 0px 20px;
+    padding-top: 10px
+}
+
+.foodarea {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.priceandname {
+    margin-bottom: 20px;
+}
+
+.foodimageandname {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }

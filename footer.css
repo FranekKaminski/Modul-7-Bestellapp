@@ -11,3 +11,8 @@ footer {
 .imprint {
     cursor: pointer;
 }
+
+.cookies:hover,
+.imprint:hover {
+    color: rgb(201, 201, 201);
+}
