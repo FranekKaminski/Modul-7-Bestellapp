@@ -1,0 +1,13 @@
+footer {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 30px;
+}
+
+.cookies,
+.imprint {
+    cursor: pointer;
+}

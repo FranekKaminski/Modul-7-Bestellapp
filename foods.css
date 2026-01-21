@@ -1,0 +1,67 @@
+h3 {
+    font-size: 28px;
+    padding: 30px 20px 0px 20px;
+    font-weight: 600;
+}
+
+h4 {
+    margin-bottom: 15px;
+}
+
+.foodarticle {
+    background: rgba(0, 0, 0, 0.645);
+    border-radius: 30px;
+    height: 250px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.foodimages {
+    height: 100px;
+    width: auto;
+    margin-bottom: 30px;
+}
+
+.startingprice {
+    font-weight: 200;
+    color: rgba(155, 155, 155, 0.791);
+    font-size: 14px;
+}
+
+.price {
+    font-weight: 200;
+    color: rgba(255, 255, 255, 0.791);
+}
+
+.plusicon {
+    background: white;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.plusicon img {
+    height: 18px;
+}
+
+.priceandaddbutton {
+    display: flex;
+    justify-content: space-between;
+}
+
+.foodsection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px 20px 0px 20px;
+}
