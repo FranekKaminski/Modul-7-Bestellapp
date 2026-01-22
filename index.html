@@ -20,24 +20,46 @@
 <body>
     <header class="widthcontrol">
         <img class="logo" src="./img/icons/MealDropTextLogo.png" alt="Logo">
-        <div class="menuicon">
+        <div class="menuicon" onclick="toggleBasket()">
             <div class="menubar1"></div>
             <div class="menubar2"></div>
             <div class="menubar3"></div>
         </div>
     </header>
 
-    <section class="basket">
-        <p>Your basket</p>
-        <div>
+    <section class="basket" id="basket">
+        <p class="yourbaskettitle">Your basket</p>
+        <div class="orderinbasket">
             <div>
-                <p>1 x Burger</p>
+                <img class="foodimageinbasket" src="./img/foodimages/burger.png" alt="Burger Bild">
+            </div>
+            <div>
+                <div>
+                    <p class="foodname">Burger</p>
                 </div>
+                <div>
+                    <p class="greyprice">$ 6.05</p>
+                </div>
+            </div>
             <div>
-                <p>+ T -</p>
-                <p>16,90 €</p>
+                <div class="numberofitems">
+                    <img class="basketsigns" src="./img/icons/minuswhite.png" alt="Minus Sign">
+                    <p class="counter">02</p>
+                    <img class="basketsigns" src="./img/icons/pluswhite.png" alt="Plus sign">
+                </div>
+                <div>
+                    <p class="combinedprice">$ 6.05</p>
+                </div>
             </div>
         </div>
+        <section class="lowerbasketsection">
+            <div class="greyline"></div>
+            <div class="totalpricetext">
+                <p>Total:</p>
+                <p class="totalprice">$ 16,90</p>
+            </div>
+            <button class="buynowbutton" onclick="buyNow()">Proceed to checkout</button>
+        </section>
     </section>
 
     <section class="top widthcontrol">

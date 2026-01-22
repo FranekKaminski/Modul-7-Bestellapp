@@ -1,5 +1,125 @@
+.basket_closed {
+    transform: translateX(100%)!important;
+    /* display: none; */
+}
+
 .basket {
-    width: 100px;
+    background: #000000;
+    height: 100vh;
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 20;
+    transform: translateX(0);
+    transition: all 0.1s linear;
+}
+
+.yourbaskettitle {
+    font-weight: 600;
+    margin-top: 130px;
+    font-size: 26px;
+}
+
+.buynowbutton {
+    background: white;
+    height: 50px;
+    width: 250px;
+    border-radius: 25px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+    margin-bottom: 30px;
+    margin-top: 15px;
+}
+
+.buynowbutton:hover {
+    background: rgb(170, 170, 170);
+}
+
+.greyline {
+    width: 95%;
+    height: 1px;
+    background: #202020;
+    margin-bottom: 15px;
+}
+
+.totalpricetext {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+}
+
+.totalprice {
+    font-size: 22px;
+    font-weight: 300;
+}
+
+.orderinbasket {
+    background: linear-gradient(45deg, rgba(19, 17, 24, 1) 0%, rgba(32, 17, 17, 1) 100%);
+    border-radius: 30px;
     height: 100px;
-    background:red;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #81272C;
+    padding: 0px 20px 0px 20px;
+}
+
+.foodimageinbasket {
+    width: 40px;
+    height: auto;
+}
+
+.greyprice {
+    font-size: 14px;
+    color: grey;
+}
+
+.foodname {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.basketsigns {
+    height: 10px;
+    background: #DC441E;
+    border-radius: 50%;
+    padding: 4px;
+    cursor: pointer;
+}
+
+.basketsigns:hover {
+    background: #ce9c8f;
+}
+
+.numberofitems {
+    display: flex;
+    margin-bottom: 5px;
+    gap: 5px;
+    align-items: center;
+}
+
+.combinedprice {
+    text-align: right;
+    font-weight: 300;
+}
+
+.counter {
+    font-weight: 300;
+    margin-left: 3px;
+    margin-right: 3px;
+    font-size: 14px;
 }

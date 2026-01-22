@@ -1,21 +1,23 @@
 header {
     height: 100px;
+    max-width: 1440px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-left: 20px;
-    margin-right: 20px;
+    background: black;
+    z-index: 21;
 }
 
 .logo {
     height: 60px;
     width: auto;
     cursor: pointer;
+    margin-left: 20px;
 }
 
 .menuicon {
     cursor: pointer;
-
+    margin-right: 20px;
 }
 
 .menuicon div {
@@ -23,4 +25,10 @@ header {
     height: 2px;
     background-color: white;
     margin: 6px 0;
+}
+
+.menuicon:hover {
+    .menubar1, .menubar2, .menubar3 {
+        background: rgb(201, 201, 201);
+    }
 }
