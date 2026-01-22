@@ -1,11 +1,15 @@
 header {
-    height: 100px;
+    height: 80px;
+    width: 100%;
     max-width: 1440px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: black;
     z-index: 21;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 .logo {
@@ -18,17 +22,26 @@ header {
 .menuicon {
     cursor: pointer;
     margin-right: 20px;
+    padding: 10px;
+    height: 24px;
+    width: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .menuicon div {
     width: 24px;
     height: 2px;
     background-color: white;
+}
+
+.menubar2 {
     margin: 6px 0;
 }
 
 .menuicon:hover {
-    .menubar1, .menubar2, .menubar3 {
-        background: rgb(201, 201, 201);
-    }
+    background: rgb(49, 49, 49);
+    border-radius: 50%;
 }

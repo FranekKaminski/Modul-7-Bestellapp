@@ -1,0 +1,53 @@
+.top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.topimages {
+    height: 470px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.topbackground {
+    background-image: url(../img/images/Banner1-1.png);
+    height: 400px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0px 0px 10px -2px #00000069;
+}
+
+.toplogo {
+    background: linear-gradient(45deg, rgba(19, 17, 24, 1) 0%, rgba(32, 17, 17, 1) 100%);
+    height: 100px;
+    width: 100px;
+    box-shadow: 0px 0px 10px -2px #000000;
+    border-radius: 50%;
+    position: absolute;
+    top: 75%;
+    left: calc(50% - 50px);
+    border: 1px solid #81272C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.toplogo:hover {
+    background: linear-gradient(45deg, rgb(30, 27, 37) 0%, rgb(53, 28, 28) 100%);
+    text-decoration: none;
+}
+
+.toplogo p {
+    color: white;
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+}
