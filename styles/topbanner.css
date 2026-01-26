@@ -14,9 +14,10 @@
 }
 
 .topbackground {
-    background-image: url(../img/images/Banner1-1.png);
-    height: 400px;
-    width: 100%;
+    background-image: url(../img/images/Banner1-1.jpg);
+    height: auto;
+    max-height: 400px;
+    width: 100vw;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

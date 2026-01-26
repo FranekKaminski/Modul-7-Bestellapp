@@ -17,10 +17,11 @@
     <link rel="stylesheet" href="./styles/navbar.css">
     <link rel="stylesheet" href="./styles/topbanner.css">
     <link rel="stylesheet" href="./styles/dialog.css">
+    <link rel="stylesheet" href="./styles/bottomnavbar.css">
     <link rel="shortcut icon" href="./img/icons/Logo1.png" type="image/x-icon">
 </head>
 
-<body onload="renderFoods()">
+<body onload="renderFoods(); calculateBasket()" id="home">
     <header class="widthcontrol">
         <img class="logo" src="./img/icons/MealDropTextLogo.png" alt="Logo">
         <div class="menuicon" onclick="toggleBasket()">
@@ -37,18 +38,18 @@
         <section class="lowerbasketsection">
             <div class="subtotaltext">
                 <p>Subtotal</p>
-                <p class="subtotalprice">$ *javascript*</p>
+                <p class="subtotalprice">$ 0.00</p>
             </div>
             <div class="deliveryfeetext">
                 <p>Delivery fee</p>
-                <p class="deliveryprice">$ *javascript*</p>
+                <p class="deliveryprice">$ 0.00</p>
             </div>
             <div class="greyline"></div>
             <div class="totalpricetext">
                 <p>Total</p>
-                <p class="totalprice">$ *javascript*</p>
+                <p class="totalprice">$ 0.00</p>
             </div>
-            <button class="buynowbutton" onclick="buyNow()">Proceed to checkout</button>
+            <button class="buynowbutton" onclick="openDialog()">Proceed to checkout</button>
         </section>
     </section>
 
@@ -74,7 +75,7 @@
         <article class="foodarea">
             <section class="category 1">
                 <div class="catogory_seperator">
-                    <h3>Sushi</h3>
+                    <h3>Menu</h3>
                 </div>
                 <div class="foodsection" id="foodsection">
                     <!-- SCRIPT STARTS HERE -->
@@ -98,7 +99,7 @@
                         </div>
                     </article> -->
                     <!-- SCRIPT ENDS HERE -->
-                    <article class="foodarticle">
+                    <!-- <article class="foodarticle">
                         <div class="foodimageandname">
                             <img class="foodimages" src="./img/foodimages/burger.png" alt="Burger Bild">
                             <div>
@@ -116,23 +117,42 @@
                                 <div class="plusicon"><img src="./img/icons/add.png" alt="plus icon"></div>
                             </div>
                         </div>
-                    </article>
+                    </article> -->
                 </div>
             </section>
         </article>
     </main>
 
-    <dialog open>
-        <p>Order confirmed!</p>
-        <p>Your food is on the way!</p>
+    <dialog id="confirmationDialog">
+        <div class="dialog1">
+            <div>
+                <p>Order confirmed!</p>
+                <p>Your food is on the way!</p>
+            </div>
+            <button onclick="closeDialog()">Close</button>
+        </div>
     </dialog>
-
 
     <footer>
         <p>&copy 2026 MealDrop</p>
         <p class="imprint">Imprint</p>
         <p class="cookies">Cookie Preferences</p>
     </footer>
+
+    <nav class="bottomnavbar">
+        <div class="bottomnavbardiv">
+            <a href="#home">
+                <img class="navbaricons" src="./img/icons/home.png" alt="Home Icon">
+            </a>
+            <a href="#account">
+                <img class="navbaricons" src="./img/icons/user.png" alt="User Icon">
+            </a>
+            <a onclick="toggleBasket()">
+                <img class="navbaricons" src="./img/icons/shopping-cart.png" alt="Shopping Cart Icon">
+                <span class="navbarbasket" id="navbarbasket">0</span>
+            </a>
+        </div>
+    </nav>
 </body>
 <script src="scripts/db.js"></script>
 <script src="scripts/template.js"></script>

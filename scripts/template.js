@@ -25,7 +25,7 @@ function renderBasketItemsTemplate(item, i) {
     return `
     <div class="orderinbasket">
         <div>
-            <img class="foodimageinbasket" src="${item.image}" alt="Burger Bild">
+            <img class="foodimageinbasket" src="${item.image}" alt="${item.name}">
         </div>
         <div>
             <div>
@@ -37,13 +37,65 @@ function renderBasketItemsTemplate(item, i) {
         </div>
         <div>
             <div class="numberofitems">
-                <img class="basketsigns" src="./img/icons/minuswhite.png" onclick="minusOneItem()" alt="Minus Sign">
-                    <p class="counter" id="basketitemcounter">${item.quantity}</p>
-                    <img class="basketsigns" src="./img/icons/pluswhite.png" onclick="plusOneItem()" alt="Plus sign">
-                    </div>
-                    <div>
-                        <p class="combinedprice">$ ${item.price}</p>
-                    </div>
+                <img class="basketsigns" src="./img/icons/minuswhite.png" onclick="minusOneItem(${i})" alt="Minus Sign">
+                <p class="counter" id="basketitemcounter-${i}">${item.quantity}</p>
+                <img class="basketsigns" src="./img/icons/pluswhite.png" onclick="plusOneItem(${i})" alt="Plus sign">
             </div>
-        </div>`
+            <div>
+                <p class="combinedprice">$ ${ (item.price * item.quantity).toFixed(2) }</p>
+            </div>
+        </div>
+    </div>`;
+}
+function renderBasketItemsTemplate(item, i) {
+    return `
+    <div class="orderinbasket">
+        <div>
+            <img class="foodimageinbasket" src="${item.image}" alt="${item.name}">
+        </div>
+        <div>
+            <div>
+                <p class="foodname">${item.name}</p>
+            </div>
+            <div>
+                <p class="greyprice">$ ${item.price}</p>
+            </div>
+        </div>
+        <div>
+            <div class="numberofitems">
+                <img class="basketsigns" src="./img/icons/minuswhite.png" onclick="minusOneItem(${i})" alt="Minus Sign">
+                <p class="counter" id="basketitemcounter-${i}">${item.quantity}</p>
+                <img class="basketsigns" src="./img/icons/pluswhite.png" onclick="plusOneItem(${i})" alt="Plus sign">
+            </div>
+            <div>
+                <p class="combinedprice">$ ${ (item.price * item.quantity).toFixed(2) }</p>
+            </div>
+        </div>
+    </div>`;
+}
+function renderBasketItemsTemplate(item, i) {
+    return `
+    <div class="orderinbasket">
+        <div>
+            <img class="foodimageinbasket" src="${item.image}" alt="${item.name}">
+        </div>
+        <div>
+            <div>
+                <p class="foodname">${item.name}</p>
+            </div>
+            <div>
+                <p class="greyprice">$ ${item.price}</p>
+            </div>
+        </div>
+        <div>
+            <div class="numberofitems">
+                <img class="basketsigns" src="./img/icons/minuswhite.png" onclick="minusOneItem(${i})" alt="Minus Sign">
+                <p class="counter" id="basketitemcounter-${i}">${item.quantity}</p>
+                <img class="basketsigns" src="./img/icons/pluswhite.png" onclick="plusOneItem(${i})" alt="Plus sign">
+            </div>
+            <div>
+                <p class="combinedprice">$ ${ (item.price * item.quantity).toFixed(2) }</p>
+            </div>
+        </div>
+    </div>`;
 }

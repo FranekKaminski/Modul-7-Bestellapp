@@ -1,0 +1,60 @@
+.bottomnavbar {
+    height: 60px;
+    width: 100%;
+    background: black;
+    position: fixed;
+    bottom: 0%;
+}
+
+.bottomnavbardiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    height: 60px;
+}
+
+.navbaricons {
+    height: 30px;
+    width: 30px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.navbaricons:hover {
+    background: rgb(49, 49, 49);
+    border-radius: 50%;
+}
+
+.bottomnavbar a {
+    background: black;
+    border: none;
+}
+
+.navbarbasket {
+    position: absolute;
+    top: 5px;
+    right: 32px;
+    background: white;
+    color: black;
+    border-radius: 50%;
+    height: 22px;
+    width: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+}
+
+@media (min-width: 850px) {
+    .bottomnavbar {
+        display: none;
+    }
+}
+
+@media (max-width: 850px) {
+footer {
+    padding-bottom: 40px;
+}
+}

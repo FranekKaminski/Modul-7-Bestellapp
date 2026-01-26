@@ -27,10 +27,10 @@ function addToBasket(i) {
         quantity: 1
     });
     renderBasketItems();
+    calculateBasket()
 }
 
 // RENDER SELECTED FOOD INTO BASKET
-// RENDER SOMETHING
 function renderBasketItems() {
     let contentRef = document.getElementById("basketitems");
     contentRef.innerHTML = "";
@@ -40,35 +40,70 @@ function renderBasketItems() {
     }
 }
 
-
 // ADD AND SUBTRACT BASKET ITEMS
-function minusOneItem() {
-    let counterRef = document.getElementById("basketitemcounter");
-    let count = parseInt(counterRef.innerHTML);
-    if (count > 1) {
-        count--;
-        counterRef.innerHTML = count;
+function minusOneItem(i) {
+    let item = basket[i];
+    if (item.quantity > 1) {
+        item.quantity--;
+    } else {
+        basket.splice(i, 1);
     }
+    renderBasketItems();
+    calculateBasket();
 }
 
-function plusOneItem() {
-    let counterRef = document.getElementById("basketitemcounter");
-    let count = parseInt(counterRef.innerHTML);
-    count++;
-    counterRef.innerHTML = count;
+function plusOneItem(i) {
+    let item = basket[i];
+    item.quantity++;
+    renderBasketItems();
+    calculateBasket();
 }
-
 
 // CALCULATE BASKET
 function calculateBasket() {
+    let subtotal = 0;
 
+    // CALCULATE SUBTOTAL
+    for (let i = 0; i < basket.length; i++) {
+        subtotal += basket[i].price * basket[i].quantity;
+    }
+
+    // DELIVERY FEE + SUBTOTAL
+    let deliveryFee = basket.length > 0 ? 6.99 : 0;
+    let total = subtotal + deliveryFee;
+
+    // UPDATE HTML
+    document.querySelector(".subtotalprice").innerHTML = `$ ${subtotal.toFixed(2)}`;
+    document.querySelector(".deliveryprice").innerHTML = `$ ${deliveryFee.toFixed(2)}`;
+    document.querySelector(".totalprice").innerHTML = `$ ${total.toFixed(2)}`;
+
+    // UPDATE NAVBAR BASKET COUNT
+    let totalItems = 0;
+    for (let i = 0; i < basket.length; i++) {
+        totalItems += basket[i].quantity;
+    }
+
+    document.querySelector(".navbarbasket").innerHTML = totalItems;
+
+    let badge = document.querySelector(".navbarbasket");
+    badge.innerHTML = totalItems;
+
+    if (totalItems === 0) {
+        badge.style.display = "none";
+    } else {
+        badge.style.display = "flex"
+    }
 }
 
-
-// BUY NOW DIALOG POP UP
-
-// close button closes dialog
+// TRANSFORM ADD TO CART BUTTON ON FOODLIST
 
 
+// BUY NOW DIALOG POP UP AND CLOSE
+const dialogRef = document.getElementById("confirmationDialog");
+function openDialog() {
+    dialogRef.showModal();
+}
 
-// RESPONSIVE MACHEN
+function closeDialog() {
+    dialogRef.close()
+}

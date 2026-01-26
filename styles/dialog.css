@@ -1,6 +1,54 @@
 dialog {
-    background: black;
+    background: #222222;
+    border-radius: 50px;
+    border: none;
+    height: 200px;
+    width: 300px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
 }
+
+.dialog1 {
+    height: 200px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
 dialog::backdrop {
-    background: black;
+    background: rgba(0, 0, 0, 0.421);
+}
+
+dialog button {
+    border: none;
+    border-radius: 30px;
+    height: 50px;
+    width: 90px;
+    color: black;
+    background: white;
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+dialog button:hover {
+    background: rgb(170, 170, 170);
+    cursor: pointer;
+}
+
+dialog p:first-child {
+    font-size: 24px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+dialog:not([open]) {
+    display: none;
 }

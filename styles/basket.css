@@ -172,3 +172,9 @@
     height: 75%;
     margin: 10px;
 }
+
+@media (max-width: 850px) {
+    .basket {
+        width: 100vw;
+    }
+}

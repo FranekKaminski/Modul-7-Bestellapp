@@ -45,3 +45,7 @@ header {
     background: rgb(49, 49, 49);
     border-radius: 50%;
 }
+
+#home {
+    scroll-margin-top: 90px;
+}
