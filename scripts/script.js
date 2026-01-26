@@ -95,9 +95,6 @@ function calculateBasket() {
     }
 }
 
-// TRANSFORM ADD TO CART BUTTON ON FOODLIST
-
-
 // BUY NOW DIALOG POP UP AND CLOSE
 const dialogRef = document.getElementById("confirmationDialog");
 function openDialog() {
@@ -106,4 +103,12 @@ function openDialog() {
 
 function closeDialog() {
     dialogRef.close()
+}
+
+// EMPTY BASKET
+function checkout() {
+    basket = [];
+    renderBasketItems();
+    calculateBasket();
+    openDialog();
 }
