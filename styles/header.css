@@ -12,6 +12,18 @@ header {
     left: 0;
 }
 
+.headericons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    gap: 10px;
+}
+
+.headericons a {
+    height: 46px;
+}
+
 .logo {
     height: 60px;
     width: auto;
@@ -21,7 +33,6 @@ header {
 
 .menuicon {
     cursor: pointer;
-    margin-right: 20px;
     padding: 10px;
     height: 24px;
     width: 24px;
@@ -48,4 +59,27 @@ header {
 
 #home {
     scroll-margin-top: 90px;
+}
+
+@media(max-width: 440px) {
+    .logo {
+        height: 35px;
+    }
+
+    .navbaricons {
+        height: 24px;
+        width: 24px;
+    }
+
+    .menuicon div {
+        width: 22px;
+    }
+
+    .menubar2 {
+        margin: 4px;
+    }
+
+    .navimageswrapper {
+        width: 300px;
+    }
 }

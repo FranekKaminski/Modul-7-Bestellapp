@@ -10,28 +10,38 @@
     <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/bottomnavbar.css">
+    <link rel="stylesheet" href="./styles/topnavbar.css">
     <link rel="stylesheet" href="./styles/header.css">
     <link rel="stylesheet" href="./styles/footer.css">
     <link rel="stylesheet" href="./styles/foods.css">
     <link rel="stylesheet" href="./styles/basket.css">
-    <link rel="stylesheet" href="./styles/navbar.css">
     <link rel="stylesheet" href="./styles/topbanner.css">
     <link rel="stylesheet" href="./styles/dialog.css">
-    <link rel="stylesheet" href="./styles/bottomnavbar.css">
+
     <link rel="shortcut icon" href="./img/icons/Logo1.png" type="image/x-icon">
 </head>
 
 <body onload="renderFoods(); calculateBasket()" id="home">
     <header class="widthcontrol">
         <img class="logo" src="./img/icons/MealDropTextLogo.png" alt="Logo">
-        <div class="menuicon" onclick="toggleBasket()">
-            <div class="menubar1"></div>
-            <div class="menubar2"></div>
-            <div class="menubar3"></div>
+        <div class="headericons">
+            <div class="menuicon" onclick="toggleTopNav()">
+                <div class="menubar1"></div>
+                <div class="menubar2"></div>
+                <div class="menubar3"></div>
+            </div>
+            <a href="#account">
+                <img class="navbaricons" src="./img/icons/user.png" alt="User Icon">
+            </a>
+            <a onclick="toggleBasket()">
+                <img class="navbaricons" src="./img/icons/shopping-cart.png" alt="Shopping Cart Icon">
+                <span class="navbarbaskettop" id="navbarbaskettop">0</span>
+            </a>
         </div>
     </header>
 
-    <section class="basket basket_closed" id="basket">
+    <aside class="basket basket_closed" id="basket">
         <p class="yourbaskettitle">Your basket</p>
         <div id="basketitems" class="basketitems">
         </div>
@@ -51,7 +61,28 @@
             </div>
             <button class="buynowbutton" onclick="checkout()">Proceed to checkout</button>
         </section>
-    </section>
+    </aside>
+
+    <nav class="topnavbar" id="topnavbar">
+        <div class="topnavbardiv">
+            <article class="topnavbararticles">
+                <div class="navimageswrapper"><img class="navbarimages" src="./img/images/voucher.jpg"
+                        alt="Gutschein Bild"></div>
+                <div class="navtextbox">
+                    <h4 class="textaligncenter">Gift happiness</h4>
+                    <p class="textaligncenter">Our MealDrop vouchers</p>
+                </div>
+            </article>
+            <article class="topnavbararticles">
+                <div class="navimageswrapper"><img class="navbarimages" src="./img/images/franchise.jpg"
+                        alt="Franchise Bild"></div>
+                <div class="navtextbox">
+                    <h4 class="textaligncenter">Franchise</h4>
+                    <p class="textaligncenter">Become a part of our family</p>
+                </div>
+            </article>
+        </div>
+    </nav>
 
     <section class="top widthcontrol">
         <div class="topimages">
@@ -73,7 +104,7 @@
 
     <main class="widthcontrol" id="menu">
         <article class="foodarea">
-            <section class="category 1">
+            <section class="category1">
                 <div class="catogory_seperator">
                     <h3>Menu</h3>
                 </div>
@@ -153,6 +184,7 @@
             </a>
         </div>
     </nav>
+
 </body>
 <script src="scripts/db.js"></script>
 <script src="scripts/template.js"></script>

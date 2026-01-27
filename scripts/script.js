@@ -1,10 +1,13 @@
-let userName = "Franek"
 let basket = [];
 
-// BASKET TOGGLE ON/OFF SWITCH
+// BASKET & TOPNAV TOGGLE ON/OFF SWITCH
 function toggleBasket() {
     document.getElementById("basket").classList.toggle('basket_closed')
-}
+};
+
+function toggleTopNav() {
+    document.querySelector(".topnavbar").classList.toggle("topnav_closed")
+};
 
 // RENDER FOODS FROM DATABASE INTO HTML
 function renderFoods() {
@@ -19,7 +22,7 @@ function renderFoods() {
 // TRANSFORM BUTTON AFTER ADDED TO BASKET
 function addToBasket(i) {
     let food = foodList[i];
-
+    let basketRef = document.getElementById("basket");
     basket.push({
         name: food.name,
         price: food.price,
@@ -27,7 +30,10 @@ function addToBasket(i) {
         quantity: 1
     });
     renderBasketItems();
-    calculateBasket()
+    calculateBasket();
+    if (basketRef.classList.contains("basket_closed")) {
+        toggleBasket()
+    };
 }
 
 // RENDER SELECTED FOOD INTO BASKET
@@ -63,12 +69,10 @@ function plusOneItem(i) {
 function calculateBasket() {
     let subtotal = 0;
 
-    // CALCULATE SUBTOTAL
+    // CALCULATE TOTAL
     for (let i = 0; i < basket.length; i++) {
         subtotal += basket[i].price * basket[i].quantity;
     }
-
-    // DELIVERY FEE + SUBTOTAL
     let deliveryFee = basket.length > 0 ? 6.99 : 0;
     let total = subtotal + deliveryFee;
 
@@ -76,23 +80,23 @@ function calculateBasket() {
     document.querySelector(".subtotalprice").innerHTML = `$ ${subtotal.toFixed(2)}`;
     document.querySelector(".deliveryprice").innerHTML = `$ ${deliveryFee.toFixed(2)}`;
     document.querySelector(".totalprice").innerHTML = `$ ${total.toFixed(2)}`;
+    updateNavbarBasket();
+}
 
-    // UPDATE NAVBAR BASKET COUNT
+// UPDATE NAVBAR BASKET COUNT
+function updateNavbarBasket() {
     let totalItems = 0;
     for (let i = 0; i < basket.length; i++) {
         totalItems += basket[i].quantity;
     }
 
-    document.querySelector(".navbarbasket").innerHTML = totalItems;
+    const topBadge = document.getElementById("navbarbaskettop");
+    const bottomBadge = document.getElementById("navbarbasket");
 
-    let badge = document.querySelector(".navbarbasket");
-    badge.innerHTML = totalItems;
-
-    if (totalItems === 0) {
-        badge.style.display = "none";
-    } else {
-        badge.style.display = "flex"
-    }
+    [topBadge, bottomBadge].forEach(badge => {
+        badge.innerHTML = totalItems;
+        badge.style.display = totalItems === 0 ? "none" : "flex";
+    });
 }
 
 // BUY NOW DIALOG POP UP AND CLOSE
