@@ -17,7 +17,7 @@
     background-image: url(../img/images/Banner1-1.jpg);
     height: auto;
     max-height: 400px;
-    width: 100vw;
+    width: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
